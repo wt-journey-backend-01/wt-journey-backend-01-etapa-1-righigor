@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensagem Recebida - DevBurger</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/contato.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍔 DevBurger</h1>
+      <p>Hamburgueria Gourmet para Desenvolvedores</p>
+    </header>
+
+    <main>
+      <section class="contato-recebido">
+        <h2>Mensagem Recebida!</h2>
+
+        <div class="mensagem-confirmacao">
+          <p>Obrigado pelo seu contato, <span id="confirma-nome"></span>!</p>
+          <p>
+            Retornaremos em breve para o e-mail
+            <span id="confirma-email"></span>.
+          </p>
+
+          <div class="detalhes-mensagem">
+            <h3>Resumo do seu contato:</h3>
+            <p><strong>Assunto:</strong> <span id="confirma-assunto"></span></p>
+            <p>
+              <strong>Mensagem:</strong> <span id="confirma-mensagem"></span>
+            </p>
+          </div>
+        </div>
+
+        <a href="/" class="btn-voltar">Voltar ao Cardápio</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 DevBurger - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+      // Pega os dados da URL (para o método GET)
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Preenche os dados na página
+      document.getElementById("confirma-nome").textContent = decodeURIComponent(
+        urlParams.get("nome") || ""
+      );
+      document.getElementById("confirma-email").textContent =
+        decodeURIComponent(urlParams.get("email") || "");
+      document.getElementById("confirma-assunto").textContent =
+        decodeURIComponent(urlParams.get("assunto") || "");
+      document.getElementById("confirma-mensagem").textContent =
+        decodeURIComponent(urlParams.get("mensagem") || "");
+    </script>
+  </body>
+</html>

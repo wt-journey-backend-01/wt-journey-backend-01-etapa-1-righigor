@@ -1,0 +1,85 @@
+/* Estilos para a página de sugestão recebida */
+.sugestao-recebida {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #27ae60;
+    text-align: center;
+}
+
+.sugestao-recebida h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #27ae60;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.mensagem-agradecimento {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #e74c3c;
+}
+
+.detalhes-sugestao {
+    text-align: left;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detalhes-sugestao h3 {
+    color: #e74c3c;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.detalhes-sugestao p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.detalhes-sugestao strong {
+    color: #2c3e50;
+}
+
+.btn-voltar {
+    display: inline-block;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-voltar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+.btn-voltar:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .sugestao-recebida {
+        padding: 1.5rem;
+    }
+    
+    .mensagem-agradecimento, .detalhes-sugestao {
+        padding: 1rem;
+    }
+}

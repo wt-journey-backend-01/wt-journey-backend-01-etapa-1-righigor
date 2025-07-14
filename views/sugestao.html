@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sugestão Recebida - DevBurger</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/sugestao.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🍔 DevBurger</h1>
+      <p>Hamburgueria Gourmet para Desenvolvedores</p>
+    </header>
+
+    <main>
+      <section class="sugestao-recebida">
+        <h2>Sugestão Recebida!</h2>
+
+        <div class="mensagem-agradecimento">
+          <p>
+            Obrigado por contribuir com sua criatividade! Sua sugestão nos ajuda
+            a criar os melhores burgers.
+          </p>
+
+          <div class="detalhes-sugestao">
+            <h3>Detalhes da sua sugestão:</h3>
+            <p>
+              <strong>Nome do Lanche:</strong> <span id="nome-lanche"></span>
+            </p>
+            <p>
+              <strong>Ingredientes:</strong>
+              <span id="ingredientes-lanche"></span>
+            </p>
+          </div>
+        </div>
+
+        <a href="/" class="btn-voltar">Voltar ao Cardápio</a>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 DevBurger - Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      document.getElementById("nome-lanche").textContent = decodeURIComponent(
+        urlParams.get("nome")
+      ).replace(/\+/g, " ");
+      document.getElementById("ingredientes-lanche").textContent =
+        decodeURIComponent(urlParams.get("ingredientes")).replace(/\+/g, " ");
+    </script>
+  </body>
+</html>
